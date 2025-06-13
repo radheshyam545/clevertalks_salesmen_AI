@@ -103,7 +103,7 @@ export default function Header() {
                   asChild
                   className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white justify-center"
                 >
-                  <Link href="/#pricing" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                     Book Meeting
                   </Link>
                 </Button>
