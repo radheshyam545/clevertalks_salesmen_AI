@@ -30,7 +30,8 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
       </body>
-      <script src="http://34.194.154.4:5000/static/widget/widget.js" data-user-id="aad4c151-a54c-44d0-959c-5b04d9a18f52" data-request-id="cmbt2ljft000bpdldi0jaq398" defer></script>
+      {/* <script src="http://34.194.154.4:5000/static/widget/widget.js" data-user-id="aad4c151-a54c-44d0-959c-5b04d9a18f52" data-request-id="cmbt2ljft000bpdldi0jaq398" defer></script> */}
+      <script src="https://jugnooapp.clevercat.ai/static/widget/widget.js" data-user-id="aad4c151-a54c-44d0-959c-5b04d9a18f52" data-request-id="cmbt2ljft000bpdldi0jaq398" defer></script>
 
     </html>
   )

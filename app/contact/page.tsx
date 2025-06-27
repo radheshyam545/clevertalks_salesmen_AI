@@ -90,7 +90,7 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-800/50 border-purple-500/30">
+            {/* <Card className="bg-slate-800/50 border-purple-500/30">
               <CardContent className="p-6 flex items-start space-x-4">
                 <MapPin className="text-purple-400 w-6 h-6 mt-1" />
                 <div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                   <p className="text-gray-300">San Francisco, CA 94107</p>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
 
