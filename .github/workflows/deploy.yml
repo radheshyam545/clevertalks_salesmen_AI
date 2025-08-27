@@ -1,9 +1,9 @@
-name: Deploy Next.js App
+name: Deploy Next.js App to EC2
 
 on:
   push:
     branches:
-      - main   # or master (jo bhi aapki deploy branch hai)
+      - main   
 
 jobs:
   deploy:
@@ -16,14 +16,31 @@ jobs:
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.9.0
         with:
-          ssh-private-key: ${{ secrets.EC2_KEY }}
+          ssh-private-key: |
+            ${{ secrets.EC2_KEY }}
 
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
+            set -e
             cd ${{ secrets.EC2_PATH }}
+
+            echo "🚀 Cleaning repo (drop any local changes)..."
+            git reset --hard
+            git clean -fd
+            git stash drop || true
+
+            echo "📥 Pulling latest code..."
             git pull origin main
-            npm install
+
+            echo "📦 Installing dependencies..."
+            npm install --legacy-peer-deps
+
+            echo "🏗️ Building Next.js app..."
             npm run build
+
+            echo "🔄 Restarting PM2 process..."
             pm2 restart jugnoo-frontend --update-env || pm2 start npm --name "jugnoo-frontend" -- start -- -p 5001
+
+            echo "✅ Deployment complete!"
           EOF
