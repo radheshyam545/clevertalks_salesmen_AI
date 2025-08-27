@@ -4,11 +4,19 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-const BookADemoButton = () => {
+interface BookADemoButtonProps {
+  onClick?: () => void;
+}
+
+const BookADemoButton = ({ onClick }: BookADemoButtonProps) => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("/contact");
+    if (onClick) {
+      onClick();
+    } else {
+      router.push("/contact");
+    }
   };
 
   return (
@@ -25,7 +33,7 @@ const BookADemoButton = () => {
 
       {/* Button Text and Icon */}
       <span className="relative z-20 flex items-center">
-        Book a Demo
+        Register Now
         <ArrowRight className="ml-3 w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" />
       </span>
     </motion.button>

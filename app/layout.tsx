@@ -5,6 +5,7 @@ import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "sonner"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -28,10 +29,26 @@ export default function RootLayout({
             <main>{children}</main>
             <Footer />
           </div>
+
+          <Toaster
+            position="top-center"
+            richColors
+            closeButton
+          // toastOptions={{
+          //   classNames: {
+          //     toast: "bg-slate-800 text-white border border-slate-700",
+          //     description: "text-sm text-gray-300",
+          //   },
+          // }}
+          />
+
         </ThemeProvider>
       </body>
       {/* <script src="http://34.194.154.4:5000/static/widget/widget.js" data-user-id="aad4c151-a54c-44d0-959c-5b04d9a18f52" data-request-id="cmbt2ljft000bpdldi0jaq398" defer></script> */}
       <script src="https://jugnooapp.clevercat.ai/static/widget/widget.js" data-user-id="aad4c151-a54c-44d0-959c-5b04d9a18f52" data-request-id="cmbt2ljft000bpdldi0jaq398" defer></script>
+     
+     {/* driptrip.in */}
+      {/* <script src="http://localhost:5000/static/widget/widget.js" data-user-id="9c6782d0-e63b-4001-b5c5-a6d6ecc95adf" data-request-id="cmetievnr0001vev43qjcjbnb" defer></script> */}
 
     </html>
   )

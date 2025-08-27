@@ -14,14 +14,26 @@ import PricingSection from "@/components/PricingSection"
 import BookADemoButton from "@/components/BookADemoButton"
 import CTASection from "@/components/CTASection"
 import { useRouter } from "next/navigation"
+import OnboardingForm from "@/components/onboarding-form"
+import { useRef } from "react"
 
 export default function HomePage() {
 
   const router = useRouter();
-
+  const onboardingFormContainerRef = useRef<HTMLDivElement>(null);
+  const onboardingFormRef = useRef<any>(null);
 
   const handleClick = () => {
     router.push("/contact");
+  };
+
+  const scrollToOnboardingForm = () => {
+    if (onboardingFormContainerRef.current) {
+      onboardingFormContainerRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => {
+        onboardingFormRef.current?.focusFirstInput?.();
+      }, 500);
+    }
   };
 
   return (
@@ -48,26 +60,8 @@ export default function HomePage() {
         {/* Subheading */}
         <p className="text-xl text-gray-300 mb-12">No Code, No Friction, All Performance</p>
 
-        {/* Live Now Section */}
-        <div className="mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-              We Are Live Now
-            </span>{" "}
-            Book a demo.
-          </h2>
-          <p className="text-gray-300 mb-8">"Hurry to get free installations!"</p>
-        </div>
-
-        {/* CTA Button */}
-        <div className="mb-16">
-          <Button
-            size="lg"
-            onClick={handleClick}
-            className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold rounded-full"
-          >
-            Install Now
-          </Button>
+        <div className="mb-12" ref={onboardingFormContainerRef}>
+          <OnboardingForm ref={onboardingFormRef} />
         </div>
 
         {/* Video Previews */}
@@ -93,7 +87,8 @@ export default function HomePage() {
           ))}
         </div> */}
 
-        <YouTubeShortsGrid />
+        {/* <YouTubeShortsGrid /> */}
+
       </section>
 
       {/* Features Section */}
@@ -163,6 +158,29 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Live Now Section */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+              We Are Live Now
+            </span>{" "}
+            Book a demo.
+          </h2>
+          <p className="text-gray-300 mb-8">"Hurry to get free installations!"</p>
+        </div>
+
+        {/* CTA Button */}
+        <div className="mb-16 text-center">
+          <Button
+            size="lg"
+            onClick={scrollToOnboardingForm}
+            className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold rounded-full"
+          >
+            Register Now
+          </Button>
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       <section className="container mx-auto px-4 py-20">
@@ -205,7 +223,7 @@ export default function HomePage() {
       {/* <PricingSection /> */}
       <section className="container mx-auto px-4 text-center py-10">
 
-        <BookADemoButton />
+        <BookADemoButton onClick={scrollToOnboardingForm} />
       </section>
 
       {/* FAQ Section */}
@@ -270,7 +288,7 @@ export default function HomePage() {
 
 
 
-      <CTASection />
+      <CTASection onClick={scrollToOnboardingForm} />
       {/* Chat Widget */}
       <ChatWidget />
     </>
