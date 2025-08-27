@@ -69,7 +69,7 @@ const OnboardingForm = forwardRef(function OnboardingForm(props, ref) {
     })
   }
 
-  if (!isSuccess) {
+  if (isSuccess) {
     return (
       <Card className="max-w-2xl mx-auto bg-white/95 backdrop-blur-sm border-2 border-green-200 shadow-2xl">
         <CardContent className="p-6 sm:p-8 text-center">
