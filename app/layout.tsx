@@ -10,9 +10,12 @@ import { Toaster } from "sonner"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "CleverCat - Turn Your Videos Into Revenue Engines",
-  description: "CleverCat helps you monetize your videos with no code, no friction, and all performance.",
-    generator: 'v0.dev'
+  title: "Juno - Your Online Salesman",
+  description: "Juno is an online salesman,support and email popup rolled in one. Chatbot designed to increase sales. No Code, No Friction, All Performance.",
+  generator: 'v0.dev',
+  icons: {
+    icon: "/logo/main_logo.png"
+  }
 }
 
 export default function RootLayout({
@@ -46,8 +49,8 @@ export default function RootLayout({
       </body>
       {/* <script src="http://34.194.154.4:5000/static/widget/widget.js" data-user-id="aad4c151-a54c-44d0-959c-5b04d9a18f52" data-request-id="cmbt2ljft000bpdldi0jaq398" defer></script> */}
       <script src="https://jugnooapp.clevercat.ai/static/widget/widget.js" data-user-id="aad4c151-a54c-44d0-959c-5b04d9a18f52" data-request-id="cmbt2ljft000bpdldi0jaq398" defer></script>
-     
-     {/* driptrip.in */}
+
+      {/* driptrip.in */}
       {/* <script src="http://localhost:5000/static/widget/widget.js" data-user-id="9c6782d0-e63b-4001-b5c5-a6d6ecc95adf" data-request-id="cmetievnr0001vev43qjcjbnb" defer></script> */}
 
     </html>

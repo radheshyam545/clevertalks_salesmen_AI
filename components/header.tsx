@@ -28,14 +28,15 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              // src="/logo/main_logo.png"
-              src="/logo/logo_withname.png"
-              alt="Jugnoo Logo"
-              width={200}
-              height={200}
+              src="/logo/main_logo.png"
+              // src="/logo/logo_withname.png"
+              alt="Juno Logo"
+              width={100}
+              height={100}
               priority
               className="rounded-full"
             />
+            <span className="text-white text-2xl font-bold">Juno</span>
           </Link>
 
           {/* Desktop Navigation */}

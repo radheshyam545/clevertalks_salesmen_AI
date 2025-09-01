@@ -50,7 +50,7 @@ export default function HomePage() {
 
         {/* Main Heading */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          Jugnoo is an online salesman,support and email popup rolled in one.
+          Juno is an online salesman,support and email popup rolled in one.
           <br />
           <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
             Chatbot designed to increase sales.
@@ -114,7 +114,7 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             How{" "}
             <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-              Jugnoo
+              Juno
             </span>{" "}
             Works
           </h2>
@@ -128,7 +128,7 @@ export default function HomePage() {
             {
               step: "01",
               title: "Add the Chatbot",
-              description: "Install CleverCat Chatbot to your Shopify store in just one click — no coding required.",
+              description: "Install Juno bot to your Shopify store in just one click — no coding required.",
             },
             {
               step: "02",
@@ -192,7 +192,7 @@ export default function HomePage() {
             </span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Hear from Shopify brands using our AI ChatBot to drive sales, engage customers, and automate support.
+            Hear from Shopify brands using our AI Juno to drive sales, engage customers, and automate support.
           </p>
         </div>
 

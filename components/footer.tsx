@@ -13,16 +13,17 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Image
-                // src="/logo/main_logo.png"
-                src="/logo/logo_withname.png"
-                alt="Jugnoo Logo"
-                width={200}
-                height={200}
+                src="/logo/main_logo.png"
+                // src="/logo/logo_withname.png"
+                alt="Juno Logo"
+                width={100}
+                height={100}
                 className="rounded-full"
               />
+              <span className="text-white text-2xl font-bold">Juno</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Let our AI Chatbot answer, recommend, and convert — all while you focus on growing your business.
+              Let our AI Juno bot answer, recommend, and convert — all while you focus on growing your business.
             </p>
             <div className="flex space-x-4">
               <Button
@@ -97,7 +98,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-purple-500/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Jugnoo. All rights reserved.</p>
+            <p className="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Juno. All rights reserved.</p>
             <div className="flex space-x-6">
               <Link href="/privacy" className="text-gray-400 hover:text-purple-400 text-sm transition-colors">
                 Privacy Policy
