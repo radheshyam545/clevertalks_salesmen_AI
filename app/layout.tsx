@@ -48,10 +48,11 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
       {/* <script src="http://34.194.154.4:5000/static/widget/widget.js" data-user-id="aad4c151-a54c-44d0-959c-5b04d9a18f52" data-request-id="cmbt2ljft000bpdldi0jaq398" defer></script> */}
-      {/* <script src="https://jugnooapp.clevercat.ai/static/widget/widget.js" data-user-id="aad4c151-a54c-44d0-959c-5b04d9a18f52" data-request-id="cmbt2ljft000bpdldi0jaq398" defer></script> */}
+     
+      {/* <script src="https://junoapp.clevercat.ai/static/widget/widget.js" data-user-id="aad4c151-a54c-44d0-959c-5b04d9a18f52" data-request-id="cmbt2ljft000bpdldi0jaq398" defer></script> */}
 
       {/* aura and you */}
-      <script src="https://junoapp.clevercat.ai/static/widget/widget.js" data-user-id="aad4c151-a54c-44d0-959c-5b04d9a18f52" data-request-id="cmf135eq50005pd6m8zgqlh29" defer></script>
+      {/* <script src="https://junoapp.clevercat.ai/static/widget/widget.js" data-user-id="aad4c151-a54c-44d0-959c-5b04d9a18f52" data-request-id="cmf135eq50005pd6m8zgqlh29" defer></script> */}
       {/* driptrip.in */}
       {/* <script src="http://localhost:5000/static/widget/widget.js" data-user-id="9c6782d0-e63b-4001-b5c5-a6d6ecc95adf" data-request-id="cmetievnr0001vev43qjcjbnb" defer></script> */}
 
